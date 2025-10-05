@@ -1,73 +1,99 @@
-# Welcome to your Lovable project
+🚖 Local Area Driver Network
 
-## Project info
+A web application that connects local drivers with passengers in their area.
+Passengers can quickly find available drivers, view their contact information, and connect via direct call or WhatsApp integration. Drivers can see a list of nearby passengers and choose whom they want to pick up.
 
-**URL**: https://lovable.dev/projects/510c565f-bc27-4c40-9b34-9bab7c581c90
+🌟 Features
+For Passengers
 
-## How can I edit this code?
+📍 Access names & details of local area drivers.
 
-There are several ways of editing your application.
+🚕 Request a drop to their destination.
 
-**Use Lovable**
+📞 Contact sharing with drivers.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/510c565f-bc27-4c40-9b34-9bab7c581c90) and start prompting.
+📲 Direct call & WhatsApp integration to connect with drivers instantly.
 
-Changes made via Lovable will be committed automatically to this repo.
+For Drivers
 
-**Use your preferred IDE**
+👤 View a list of passengers requesting rides.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+✅ Choose which passenger to accept.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+📞 Call or WhatsApp the passenger directly.
 
-Follow these steps:
+🔒 Secure and verified communication system.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+🛠️ Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Frontend: React.js
 
-# Step 3: Install the necessary dependencies.
-npm i
+Backend: Node.js + Express.js
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Database: MySQL
 
-**Edit a file directly in GitHub**
+Other Integrations:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Twilio API (for calling system)
 
-**Use GitHub Codespaces**
+WhatsApp API (for chat & messaging)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+⚙️ Installation
+1. Clone the repository
+git clone https://github.com/your-username/local-area-driver-network.git
+cd local-area-driver-network
 
-## What technologies are used for this project?
+2. Install dependencies
+Backend
+cd backend
+npm install
 
-This project is built with:
+Frontend
+cd frontend
+npm install
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. Setup Database (MySQL)
 
-## How can I deploy this project?
+Create a new MySQL database.
 
-Simply open [Lovable](https://lovable.dev/projects/510c565f-bc27-4c40-9b34-9bab7c581c90) and click on Share -> Publish.
+Import the schema from /database/schema.sql.
 
-## Can I connect a custom domain to my Lovable project?
+Update database credentials in backend/config/db.js.
 
-Yes, you can!
+4. Configure Environment Variables
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Create a .env file in the backend folder:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+PORT=5000
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=yourpassword
+DB_NAME=driver_network
+
+TWILIO_ACCOUNT_SID=your_twilio_sid
+TWILIO_AUTH_TOKEN=your_twilio_token
+WHATSAPP_API_KEY=your_whatsapp_key
+
+5. Run the Project
+Start Backend
+cd backend
+npm start
+
+Start Frontend
+cd frontend
+npm start
+
+
+The frontend runs at: http://localhost:3000
+
+The backend runs at: http://localhost:5000
+
+📌 Future Enhancements
+
+🌍 Live location tracking with Google Maps API.
+
+⭐ Ratings & feedback system for both drivers and passengers.
+
+🔔 Real-time notifications for ride updates.
+
+💳 Online payment integration.
